@@ -1,9 +1,8 @@
 function App() {
-
-  return (
-    <>
-    </>
-  )
+  const hello = <h1>Hello, World!</h1>;
+  return <>
+  {hello}
+  </>;
 }
 
-export default App
+export default App;
