@@ -1,9 +1,9 @@
-import Greeting from "./assets/components/Greeting";
+import Greeting from "./components/Greeting";
 
 function App() {
   return (
     <>
-      <Greeting name="Luigi"/>
+      <Greeting name="Luigi" />
     </>
   );
 }
