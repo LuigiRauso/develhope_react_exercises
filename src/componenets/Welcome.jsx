@@ -5,7 +5,7 @@ function Welcome({ name = "User", age }) {
   return (
     <>
       <p>Welcome, {name}</p>
-      <Age age={age} />
+      {age > 18 && <Age age={age} />}
     </>
   );
 }
