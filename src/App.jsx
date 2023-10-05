@@ -1,12 +1,11 @@
 import React from "react";
-import Hello from "./componenets/Hello";
-import Message from "./componenets/Message";
+import Welcome from "./componenets/Welcome";
 
 function App() {
   return (
-    <div>
-      <Hello />
-    </div>
+    <>
+      <Welcome name="Luigi" />
+    </>
   );
 }
 
