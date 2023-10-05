@@ -1,10 +1,11 @@
 import React from "react";
+import Age from "./Age";
 
 function Welcome({ name = "User", age }) {
   return (
     <>
       <p>Welcome, {name}</p>
-      <p>Your age is {age}</p>
+      <Age age={age} />
     </>
   );
 }
