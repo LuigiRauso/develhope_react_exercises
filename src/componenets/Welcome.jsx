@@ -1,22 +1,12 @@
 import React from "react";
 
-// SOLUTION 1:
-function Welcome({ name = "User" }) {
+function Welcome({ name = "User", age }) {
   return (
     <>
       <p>Welcome, {name}</p>
+      <p>Your age is {age}</p>
     </>
   );
 }
-
-// SOLUTION 2:
-// function Welcome(props) {
-//   const name = props.name || "Guest";
-//   return (
-//     <>
-//       <p>Welcome, {name}</p>
-//     </>
-//   );
-// }
 
 export default Welcome;
