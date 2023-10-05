@@ -1,7 +1,7 @@
 import React from "react";
 
 // SOLUTION 1:
-function Welcome({ name }) {
+function Welcome({ name = "User" }) {
   return (
     <>
       <p>Welcome, {name}</p>
@@ -11,9 +11,10 @@ function Welcome({ name }) {
 
 // SOLUTION 2:
 // function Welcome(props) {
+//   const name = props.name || "Guest";
 //   return (
 //     <>
-//       <p>Welcome, {props.name}</p>
+//       <p>Welcome, {name}</p>
 //     </>
 //   );
 // }
