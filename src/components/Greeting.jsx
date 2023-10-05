@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Greeting() {
+function Greeting({name}) {
   return (
-    <h1>Hello, {name}</h1>
+    <p>Hello, {name}</p>
   )
 }
 
@@ -10,7 +10,7 @@ export default Greeting
 
 /*
 
-Q: What happens if the name variable is not passed to the function?
-A: If name is not passed to the Greeting function, the component will render with the text "Hello, "
+Q: What happens if the name variable contains a JSX expression instead of a string?
+A: If name contains a JSX expression instead of a string, the component will render the JSX expression as it is.
 
 */

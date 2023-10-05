@@ -3,7 +3,7 @@ import Greeting from "./components/Greeting";
 function App() {
   return (
     <>
-      <Greeting name="Luigi" />
+      <Greeting name={<strong>World</strong>} />
     </>
   );
 }
