@@ -4,7 +4,7 @@ import Welcome from "./componenets/Welcome";
 function App() {
   return (
     <>
-      <Welcome name={<b>Luigi</b>} age="25" />
+      <Welcome name="John" age="25" />
     </>
   );
 }
