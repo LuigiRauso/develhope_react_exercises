@@ -1,11 +1,7 @@
 import React from "react";
 
-function AlertClock() {
-  const handleClick = () => {
-    alert(`It's: ${new Date().toLocaleTimeString("it-IT")}`);
-  };
-
-  return <button onClick={handleClick}>What time is it?</button>;
+function AlertClock(props) {
+  return <button onClick={props.onClick}>What time is it?</button>;
 }
 
 export default AlertClock;
