@@ -1,9 +1,9 @@
-import Counter from "./Components/Counter";
+import Clock from "./Components/Clock";
 
 function App() {
   return (
     <>
-      <Counter initialValue={0} increment={1} decrement={1} />
+      <Clock />
     </>
   );
 }
