@@ -8,6 +8,7 @@ function MouseClicker(props) {
 
   const handleImageClick = (event) => {
     console.log(event.target.src);
+    event.stopPropagation();
   };
 
   return (
@@ -23,6 +24,6 @@ function MouseClicker(props) {
 export default MouseClicker;
 
 /* 
-Q: Does the name attribute of the button still get printed to the console when the image is clicked? Why?
-A: Yes, the name attribute of the button is printed when the image is clicked. This happens due to event bubbling in React, where an event on a child element also triggers on its parent elements.
+Q: How can you prevent the name attribute of the button from being printed to the console when the image is clicked?
+A: You can prevent this by using event.stopPropagation() in the image's click event handler.
 */
