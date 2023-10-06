@@ -1,9 +1,9 @@
-import MouseClicker from "./Components/MouseClicker";
+import MultiButton from "./Components/MultiButton";
 
 function App() {
   return (
     <>
-      <MouseClicker name="one" />
+      <MultiButton />
     </>
   );
 }
