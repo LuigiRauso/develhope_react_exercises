@@ -1,10 +1,10 @@
 import React from "react";
-import Welcome from "./componenets/Welcome";
+import AlertClock from "./componenets/AlertClock";
 
 function App() {
   return (
     <>
-      <Welcome name="John" age="17" />
+      <AlertClock />
     </>
   );
 }
