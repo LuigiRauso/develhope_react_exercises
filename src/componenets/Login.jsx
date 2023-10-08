@@ -23,17 +23,19 @@ function Login({ onLogin }) {
     });
   };
 
-  const handleLoginClick = (event) => {
-    event.preventDefault();
-    onLogin(data);
-  };
-
   const handleResetClick = () => {
     setData(formData);
   };
 
+  // Q: How do you prevent the default behavior of the form element?
+  // A: We prevent the default behaviour of the form element by using the event.preventDefault() method in the event handler function.
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    onLogin(data);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <label htmlFor="username">Username: </label>
       <input
         type="text"
@@ -60,11 +62,7 @@ function Login({ onLogin }) {
         checked={data.remember}
         onChange={handleInputChange}
       />
-      <button
-        type="submit"
-        disabled={!data.username || !data.password}
-        onClick={handleLoginClick}
-      >
+      <button type="submit" disabled={!data.username || !data.password}>
         Login
       </button>
       <br />
