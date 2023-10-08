@@ -36,6 +36,15 @@ function UncontrolledLogin() {
         };
     */
 
+    /* 
+    Attempt to access the values of the form using the DOM API by reading the event.target of the onSubmit event handler.
+    Q: What is the standard API?
+    A: The standard API to access data form is the FormData interface. This is generally the recommended approach.
+
+    Q: Are there non-standard APIs that can be used to access the form data?
+    A: Absolutely, non-standard approaches include directly interfacing with form inputs via their name attribute, as shown in the third method. Alternatively, you can use the first and second method.
+    */
+
     const username = event.target.elements.namedItem("username").value;
     const password = event.target.elements.namedItem("password").value;
     const remember = event.target.elements.namedItem("remember").checked;
