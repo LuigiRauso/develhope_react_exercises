@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Welcome from "./Welcome";
+import Login from "./Login";
 
 function InteractiveWelcome() {
   const [name, setName] = useState("");
@@ -12,6 +13,7 @@ function InteractiveWelcome() {
     <>
       <input type="text" value={name} onChange={handleInputNameChange} />
       <Welcome name={name} />
+      <Login />
     </>
   );
 }
