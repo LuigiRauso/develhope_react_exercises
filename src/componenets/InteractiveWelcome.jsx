@@ -9,11 +9,15 @@ function InteractiveWelcome() {
     setName(event.target.value);
   };
 
+  const handleLogin = (loginData) => {
+    console.log(loginData);
+  };
+
   return (
     <>
       <input type="text" value={name} onChange={handleInputNameChange} />
       <Welcome name={name} />
-      <Login />
+      <Login onLogin={handleLogin} />
     </>
   );
 }

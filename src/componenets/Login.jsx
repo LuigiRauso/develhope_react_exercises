@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 
-function Login() {
-  const [data, setData] = useState({
-    username: "",
-    password: "",
-    remember: false,
-  });
+const formData = {
+  username: "",
+  password: "",
+  remember: false,
+};
+
+function Login({ onLogin }) {
+  const [data, setData] = useState(formData);
 
   const handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     const checked = event.target.checked;
     const type = event.target.type;
-    console.log(event);
 
     setData((data) => {
       return {
@@ -20,6 +21,11 @@ function Login() {
         [name]: type === "checkbox" ? checked : value,
       };
     });
+  };
+
+  const handleLoginClick = (event) => {
+    event.preventDefault();
+    onLogin(data);
   };
 
   return (
@@ -50,6 +56,13 @@ function Login() {
         checked={data.remember}
         onChange={handleInputChange}
       />
+      <button
+        type="submit"
+        disabled={!data.username || !data.password}
+        onClick={handleLoginClick}
+      >
+        Login
+      </button>
     </form>
   );
 }
