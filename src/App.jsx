@@ -1,10 +1,10 @@
 import React from "react";
-import InteractiveWelcome from "./componenets/InteractiveWelcome";
+import UncontrolledLogin from "./componenets/UncontrolledLogin";
 
 function App() {
   return (
     <>
-      <InteractiveWelcome />
+      <UncontrolledLogin />
     </>
   );
 }
