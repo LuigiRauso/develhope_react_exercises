@@ -28,6 +28,10 @@ function Login({ onLogin }) {
     onLogin(data);
   };
 
+  const handleResetClick = () => {
+    setData(formData);
+  };
+
   return (
     <form>
       <label htmlFor="username">Username: </label>
@@ -62,6 +66,10 @@ function Login({ onLogin }) {
         onClick={handleLoginClick}
       >
         Login
+      </button>
+      <br />
+      <button type="reset" onClick={handleResetClick}>
+        Reset
       </button>
     </form>
   );
