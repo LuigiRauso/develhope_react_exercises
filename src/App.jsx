@@ -1,10 +1,12 @@
 import React from "react";
 import Welcome from "./componenets/Welcome";
+import InteractiveWelcome from "./componenets/InteractiveWelcome";
 
 function App() {
   return (
     <>
-      <Welcome name="John" age="17" />
+
+      <InteractiveWelcome />
     </>
   );
 }
