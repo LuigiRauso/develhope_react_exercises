@@ -4,10 +4,10 @@ function UncontrolledLogin() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    /* 
+    /* 47 - UNCONTROLLED FORMS ->
+
     Q: When accessing the data of the form, what are the ways that you can access the current value of the username and password inputs?
     A: There are several ways to access the current value of the username and password inputs in an uncontrolled form:
-
 
     1. First method:
         const username = event.target.elements.namedItem("username").value;
@@ -36,13 +36,20 @@ function UncontrolledLogin() {
         };
     */
 
-    /* 
+    /* 48 - UNCONTROLLED FORMS ->
+
     Attempt to access the values of the form using the DOM API by reading the event.target of the onSubmit event handler.
     Q: What is the standard API?
     A: The standard API to access data form is the FormData interface. This is generally the recommended approach.
 
     Q: Are there non-standard APIs that can be used to access the form data?
     A: Absolutely, non-standard approaches include directly interfacing with form inputs via their name attribute, as shown in the third method. Alternatively, you can use the first and second method.
+    */
+
+    /* 49 - UNCONTROLLED FORMS ->
+    
+    Q: Attempt to access the values of the form by using the FormData API. What are the advantages? What are the disadvantages?
+    A: The FormData API offers a simple method for extracting form values. It's compatible with various browsers and supports file uploads. However, it has limitations when dealing with nested fields and null values.
     */
 
     const username = event.target.elements.namedItem("username").value;
