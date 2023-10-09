@@ -6,7 +6,7 @@ function TodoList() {
 
   const handleButtonClick = () => {
     setItems([...items, inputValue]);
-    setInputValue("");
+    setInputValue(""); // This function will clear the input every time a Todo is added to the items array.
   };
 
   return (
