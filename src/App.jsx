@@ -1,9 +1,9 @@
-import FocusableInput from "./componenets/FocusableInput";
+import LogTimeOnMount from "./componenets/LogTimeOnMount";
 
 function App() {
   return (
     <>
-      <FocusableInput />
+      <LogTimeOnMount />
     </>
   );
 }
