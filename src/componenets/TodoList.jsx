@@ -13,6 +13,10 @@ function TodoList() {
     setItems([]);
   };
 
+  const handleRemoveButton = (removedIndex) => {
+    setItems(items.filter((_, index) => index !== removedIndex));
+  };
+
   return (
     <>
       <h2>TO DO LIST:</h2>
@@ -27,7 +31,13 @@ function TodoList() {
       <button onClick={handleResetButton}>Reset</button>
       <ul>
         {items.map((item, index) => {
-          return <li key={index}>{item}</li>;
+          return (
+            <li key={index}>
+              {item}
+              <br />
+              <button onClick={() => handleRemoveButton(index)}>Remove</button>
+            </li>
+          );
         })}
       </ul>
     </>
