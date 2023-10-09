@@ -1,23 +1,33 @@
-import React, { useEffect, useInsertionEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 function Counter({ initialValue, increment, decrement }) {
   const [counter, setCounter] = useState(initialValue);
-  useEffect(() => {
-    console.log(`The current value of counter is: ${counter}`);
-  }, [counter]);
+  const currDirection = useRef(null);
+  const prevDirection = useRef(null);
 
   const handleIncrement = () => {
     setCounter((prev) => prev + increment);
+    currDirection.current = "up";
   };
 
   const handleDecrement = () => {
     setCounter((prev) => prev - decrement);
+    currDirection.current = "down";
   };
 
   const handleReset = () => {
     setCounter(initialValue);
+    currDirection.current = null;
   };
+
+  useEffect(() => {
+    console.log(`The current value of counter is: ${counter}`);
+    if (currDirection.current !== prevDirection.current) {
+      console.log(`The counter went ${currDirection.current}`);
+      prevDirection.current = currDirection.current;
+    }
+  }, [counter]);
 
   return (
     <>
