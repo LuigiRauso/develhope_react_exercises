@@ -3,8 +3,8 @@ import React from "react";
 function Colors({ items }) {
   return (
     <ul>
-      {items.map((color, index) => (
-        <li key={index}>{color}</li>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );
