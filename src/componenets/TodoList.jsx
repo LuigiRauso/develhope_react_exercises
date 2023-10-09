@@ -6,7 +6,11 @@ function TodoList() {
 
   const handleButtonClick = () => {
     setItems([...items, inputValue]);
-    setInputValue(""); // This function will clear the input every time a Todo is added to the items array.
+    setInputValue("");
+  };
+
+  const handleResetButton = () => {
+    setItems([]);
   };
 
   return (
@@ -19,6 +23,8 @@ function TodoList() {
         onChange={(event) => setInputValue(event.target.value)}
       />
       <button onClick={handleButtonClick}>Add</button>
+      <br />
+      <button onClick={handleResetButton}>Reset</button>
       <ul>
         {items.map((item, index) => {
           return <li key={index}>{item}</li>;
