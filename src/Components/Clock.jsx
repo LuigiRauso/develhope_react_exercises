@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import classes from "./Clock.module.scss";
 
 function Clock() {
   const [time, setTime] = useState(new Date().toLocaleTimeString("it-IT"));
@@ -11,7 +12,12 @@ function Clock() {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <h2>Current time: {time}</h2>;
+  return (
+    <div className={classes["clock-container"]}>
+      <h2>Current time:</h2>
+      <h4>{time}</h4>
+    </div>
+  );
 }
 
 export default Clock;
