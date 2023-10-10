@@ -62,7 +62,11 @@ function Login({ onLogin }) {
         checked={data.remember}
         onChange={handleInputChange}
       />
-      <button type="submit" disabled={!data.username || !data.password}>
+      <button
+        type="submit"
+        disabled={!data.username || !data.password}
+        style={{ backgroundColor: data.password > 8 ? "green" : "red" }}
+      >
         Login
       </button>
       <br />
