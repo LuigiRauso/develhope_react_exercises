@@ -1,5 +1,5 @@
 import React from "react";
-import AlertClock from "./componenets/AlertClock";
+import AlertClock from "./components/AlertClock";
 
 function App() {
   return (
