@@ -1,6 +1,5 @@
 import React from "react";
-import Hello from "./componenets/Hello";
-import Message from "./componenets/Message";
+import Hello from "./components/Hello";
 
 function App() {
   return (
