@@ -2,20 +2,27 @@ import React from "react";
 import useGithubUser from "../useGithubUser";
 
 function GithubUser({ username }) {
-  const { user, error } = useGithubUser(username);
+  const { user, error, loading } = useGithubUser(username);
+
+  if (loading) {
+    return (
+      <div>
+        <p>Fetching user data... </p>
+      </div>
+    );
+  }
+  if (!user) {
+    return (
+      <div>
+        <p>No data available for the provided username.</p>
+      </div>
+    );
+  }
 
   if (error) {
     return (
       <div>
         <p>Error: {error.message}</p>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div>
-        <p>Data is loading...</p>
       </div>
     );
   }
