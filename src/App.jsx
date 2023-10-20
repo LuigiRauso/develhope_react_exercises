@@ -8,11 +8,13 @@ function App() {
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
   };
+
   return (
     <>
       <LanguageContext.Provider value={language}>
         <div>
           <Clock />
+          <label htmlFor="language">Select language: </label>
           <select
             name="language"
             id="language"
