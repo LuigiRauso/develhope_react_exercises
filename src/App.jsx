@@ -1,9 +1,9 @@
-import GithubUsers from "./components/GithubUsers";
+import GithubUser from "./components/GithubUser";
 
 function App() {
   return (
     <>
-      <GithubUsers />
+      <GithubUser username="luigirauso" />
     </>
   );
 }
