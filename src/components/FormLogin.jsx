@@ -1,8 +1,8 @@
 import React from "react";
 import useForm from "../useForm";
 
-function Form() {
-  const [formData, onInputChange] = useForm({ username: "", password: "" });
+function FormLogin() {
+  const { formData, onInputChange } = useForm({ username: "", password: "" });
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -33,4 +33,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLogin;

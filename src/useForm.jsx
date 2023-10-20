@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function useForm(initialValue) {
   const [formData, setFormData] = useState(initialValue);
@@ -12,7 +12,6 @@ function useForm(initialValue) {
       [name]: value,
     });
   };
-
   return { formData, onInputChange };
 }
 
