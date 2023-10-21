@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function useCounter(initialValue = 0) {
   const [counter, setCount] = useState(initialValue);
@@ -15,17 +15,4 @@ function useCounter(initialValue = 0) {
   };
 }
 
-function HookCounter() {
-  const { onCounter, onIncrement, onDecrement, onReset } = useCounter(0);
-
-  return (
-    <div>
-      <h2>Good job, you've counted to: {onCounter}</h2>
-      <button onClick={onIncrement}>Increment</button>
-      <button onClick={onDecrement}>Decrement</button>
-      <button onClick={onReset}>Reset</button>
-    </div>
-  );
-}
-
-export default HookCounter;
+export default useCounter;

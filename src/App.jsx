@@ -1,9 +1,9 @@
-import HookCounter from "./components/HookCounter";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <>
-      <HookCounter />
+      <Counter />
     </>
   );
 }
