@@ -27,6 +27,15 @@ function App() {
           element={<Counter initialValue={0} increment={1} decrement={1} />}
         />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route
+          path="*"
+          element={
+            <div>
+              <p>Page not found</p>
+              <Link to="/">Go Home</Link>
+            </div>
+          }
+        />
       </Routes>
     </>
   );
