@@ -1,10 +1,13 @@
 import React from "react";
-import Welcome from "./componenets/Welcome";
+import Welcome from "./components/Welcome";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Welcome name="John" age="17" />
+      <Routes>
+        <Route path="/" element={<Welcome name="John" age="17" />} />
+      </Routes>
     </>
   );
 }
