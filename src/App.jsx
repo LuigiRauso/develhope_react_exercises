@@ -3,6 +3,7 @@ import Welcome from "./components/Welcome";
 import Counter from "./Components/Counter";
 import { Route, Routes, Link } from "react-router-dom";
 import ShowGithubUser from "./components/ShowGithubUser";
+import GithubUserList from "./components/GithubUserList";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
             <Link to="/counter">Counter</Link>
           </li>
           <li>
-            <Link to="/users/luigirauso">My Github Page</Link>
+            <Link to="/users">Github Users</Link>
           </li>
         </ul>
       </nav>
@@ -26,7 +27,9 @@ function App() {
           path="/counter"
           element={<Counter initialValue={0} increment={1} decrement={1} />}
         />
-        <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<GithubUserList />}>
+          <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
         <Route
           path="*"
           element={
