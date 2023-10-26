@@ -7,7 +7,7 @@ function GithubUser({ username }) {
   if (error) {
     return (
       <div>
-        <p>Error: {error.message}</p>
+        <p>Error: {error}</p>
       </div>
     );
   }

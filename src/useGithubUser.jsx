@@ -10,6 +10,10 @@ const fetcher = async (url) => {
 };
 
 const useGithubUser = (username) => {
+  if (!username) {
+    return { user: null, error: "Please type a username" };
+  }
+
   const { data, error } = useSWR(
     `https://api.github.com/users/${username}`,
     fetcher
