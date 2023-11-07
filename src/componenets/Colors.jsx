@@ -4,8 +4,8 @@ import Color from "./Color";
 function Colors({ items }) {
   return (
     <ul>
-      {items.map((item) => (
-        <Color item={item} />
+      {items.map((item, index) => (
+        <Color key={index} item={item} />
       ))}
     </ul>
   );
